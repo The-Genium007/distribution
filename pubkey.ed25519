@@ -1,0 +1,5 @@
+# TesseraSynth modset signing key (Ed25519)
+# Format: raw 32-byte public key, base64.
+# This is a reference copy. The launcher PINS this value in its binary; it does NOT
+# fetch it at runtime (fetching would defeat the purpose). Rotation = new key + relaunch.
+key = cRjBE8ZUs4WvGVX8sUC5r2eLN0nHtBTuVyUsFQSLJqM=

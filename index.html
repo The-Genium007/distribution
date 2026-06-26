@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>TesseraSynth — Distribution</title>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center;
+      background: #07080c; color: #c8d0e0;
+      font: 15px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    main { max-width: 46rem; padding: 2rem; }
+    h1 { color: #4be0c8; letter-spacing: .18em; font-size: 1.1rem; margin: 0 0 1.2rem; }
+    code { color: #9fb3d8; }
+    a { color: #4be0c8; }
+    .muted { color: #5c6b85; }
+    hr { border: 0; border-top: 1px solid #1a2233; margin: 1.4rem 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>// TESSERASYNTH · DISTRIBUTION</h1>
+    <p>Hôte statique des <strong>modsets</strong> consommés par le launcher
+       (modèle <em>manifest-first</em>, manifestes signés Ed25519).</p>
+    <hr />
+    <p class="muted">Manifestes :</p>
+    <p><code>/modsets/&lt;canal&gt;/latest.json</code> &nbsp;+&nbsp; <code>.sig</code><br />
+       canaux : <code>stable</code> · <code>playtest</code> · <code>dev</code></p>
+    <p class="muted">Clé publique de signature : <a href="pubkey.ed25519">pubkey.ed25519</a></p>
+    <hr />
+    <p class="muted">Endpoint machine, pas une page destinée aux humains.</p>
+  </main>
+</body>
+</html>

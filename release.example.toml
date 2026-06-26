@@ -1,0 +1,30 @@
+# Descripteur de release modset — consommé par `tessera-release build`.
+# Copie-le et adapte-le par release. Exemple pour le canal `dev`.
+
+project = "TesseraSynth"
+channel = "dev"
+game_version = "2.31"
+modset_version = "0.1.0-dev1"
+released_at = "2026-06-26T00:00:00Z"   # RFC 3339 ; passé explicitement (pas d'horloge implicite)
+
+# Chaque package = un composant overlay zippé, enraciné à la racine du jeu.
+# `source` = dossier local dont le CONTENU est zippé tel quel (chemins relatifs).
+# `kind` ∈ core | dependency | graphics | optimization | server-profile
+# `profile` libre (core, balanced, high, low, …) ; `required` = paquet obligatoire.
+
+[[package]]
+id = "client-mod"
+kind = "core"
+version = "0.1.0-dev1"
+source = "staging/client-mod"
+required = true
+profile = "core"
+
+# Exemple de dépendance épinglée (activé après validation 0-B) :
+# [[package]]
+# id = "red4ext"
+# kind = "dependency"
+# version = "1.30.0"
+# source = "staging/red4ext"
+# required = true
+# profile = "core"
