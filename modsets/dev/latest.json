@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "project": "TesseraSynth",
+  "channel": "dev",
+  "gameVersion": "2.31",
+  "modsetVersion": "0.1.0-dev1",
+  "releasedAt": "2026-06-27T00:00:00Z",
+  "packages": [
+    {
+      "id": "client-mod",
+      "kind": "core",
+      "version": "0.1.0-dev1",
+      "url": "https://github.com/The-Genium007/distribution/releases/download/modset-v0.1.0-dev1/client-mod.zip",
+      "sha256": "ff36af74783e9fe1ed2c1d8c04d82e0a77caf5060093f74bcd8077a7f4f1101c",
+      "size": 405,
+      "installMode": "overlay",
+      "required": true,
+      "profile": "core"
+    }
+  ]
+}
