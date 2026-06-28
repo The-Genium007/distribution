@@ -3,16 +3,16 @@
   "project": "TesseraSynth",
   "channel": "dev",
   "gameVersion": "2.31",
-  "modsetVersion": "0.1.0-dev3",
+  "modsetVersion": "0.1.0-dev4",
   "releasedAt": "2026-06-28T00:00:00Z",
   "packages": [
     {
       "id": "cyberverse-client",
       "kind": "core",
-      "version": "0.1.0-dev3",
-      "url": "https://github.com/The-Genium007/distribution/releases/download/modset-v0.1.0-dev3/cyberverse-client.zip",
-      "sha256": "e176756364dab79bee25abd51788723525589f86571d26e6cc7ffef086fb01ae",
-      "size": 7540762,
+      "version": "0.1.0-dev4",
+      "url": "https://github.com/The-Genium007/distribution/releases/download/modset-v0.1.0-dev4/cyberverse-client.zip",
+      "sha256": "6830e658a97358011aff94825373f150d29c3e8afeda76563de4ec3a294cef77",
+      "size": 5689517,
       "installMode": "overlay",
       "required": true,
       "profile": "core"
