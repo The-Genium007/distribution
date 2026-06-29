@@ -1,0 +1,41 @@
+# Toolchain de modding épinglée (ADR 0004), récupérée + cachée par `tessera-release` et
+# empaquetée en packages `dependency` du modset (install par le launcher sur jeu vanille,
+# dans l'ordre `order`). Ce sont des OUTILS open-source (pas des assets CDPR) → redistribuables.
+#
+# Bumper une version = changer `version` + `url` + `sha256` (le cache se ré-invalide tout seul).
+
+game_version = "2.31"
+
+[[tool]]
+id = "red4ext"
+version = "1.30.0"
+url = "https://github.com/wopss/RED4ext/releases/download/v1.30.0/red4ext-1.30.0.zip"
+sha256 = "3a72225c9d2c46c99f4a4159d952b9d24366357c2423eb7ea255c84e9e11c0b0"
+order = 1
+required = true
+
+[[tool]]
+id = "redscript"
+version = "0.5.31"
+url = "https://github.com/jac3km4/redscript/releases/download/v0.5.31/redscript-v0.5.31-windows.zip"
+sha256 = "799bbd88863f6728616f8d723c941ea15dff71ed5bbfd50c525f0d39ea0bf46b"
+order = 2
+required = true
+
+[[tool]]
+id = "codeware"
+version = "1.20.3"
+url = "https://github.com/psiberx/cp2077-codeware/releases/download/v1.20.3/Codeware-1.20.3.zip"
+sha256 = "9a53e9b368f1603013985ecb6a8d8715501e46d4c2955832446a658a746e3a0e"
+order = 3
+required = true
+
+# CET = console/overlay Lua. Pas requis par la tranche 0-D (qui n'utilise que RED4ext +
+# redscript + Codeware) → optionnel, mais fourni pour le baseline complet.
+[[tool]]
+id = "cet"
+version = "1.37.1"
+url = "https://github.com/maximegmd/CyberEngineTweaks/releases/download/v1.37.1/cet_1.37.1.zip"
+sha256 = "1855017796a27f518199f5b7d7210ef1db7a5c5f0af468c68e04e6e666ad248c"
+order = 4
+required = false
