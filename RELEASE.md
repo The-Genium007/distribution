@@ -3,6 +3,35 @@
 Procédure pour produire et publier un manifeste signé + ses zips, consommables par le launcher.
 Outil : `tessera-release` (crate `tools/release`). Contrat : [ADR 0006](../docs/architecture/0006-distribution-and-signing.md).
 
+## Publication via CI (recommandé)
+
+Le workflow **`.github/workflows/modset-release.yml`** (`workflow_dispatch`, bouton manuel) automatise
+tout. Trois actions :
+
+- **`package-dev`** → assemble le core (netcode épinglé `netcode-v*` + mods redscript in-repo +
+  toolchain) et publie sur **dev** avec une version `X.Y.Z-devN` auto-incrémentée.
+- **`promote`** (`from` = dev ou playtest) → **re-manifeste les octets exacts** du canal source vers
+  le suivant (dev→playtest retire `-dev` ; playtest→stable). Ce qui passe en stable est
+  byte-pour-byte ce qui a été validé.
+- **`hotfix`** (cible stable) → repackage stable avec un `Z` incrémenté.
+
+**Versionnage par canal** : dev `X.Y.Z-devN` · playtest/stable `X.Y.Z` (bump `Z`). Chaque canal suit
+sa propre version (lue dans son `latest.json`).
+
+**Composition** : les packages du modset core sont déclarés dans
+[`modset.packages.toml`](modset.packages.toml) — ajouter un mod interne = ajouter une entrée.
+
+**Secrets requis (setup opérateur, une fois)** : `TESSERA_SIGNING_KEY` (seed de signature) et
+`DISTRIBUTION_TOKEN` (push + Releases sur `The-Genium007/distribution`).
+
+> ⚠️ **`netcode-v*`** : le workflow **télécharge** l'overlay netcode par version. La *publication* de
+> `netcode-v<version>` (le zip `cyberverse-client.zip` = port Cyberverse) provient du **build du
+> netcode**, pas de `client-plugin.yml` (qui compile le plugin minimal `tessera-client`). Tant que
+> le build Cyberverse n'est pas un workflow, publier `netcode-v*` **une fois à la main** (upload du
+> `cyberverse-client.zip` existant), puis épingler cette version.
+
+La procédure **manuelle** ci-dessous reste le **fallback** (ou pour comprendre ce que fait le CI).
+
 ## Pré-requis (une fois)
 
 1. **Dépôt public** `The-Genium007/distribution` créé, **GitHub Pages activé** sur la branche
