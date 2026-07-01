@@ -1,0 +1,17 @@
+# Composition du modset CORE (mods maison). Consommé par `modset-release.yml` via
+# `tessera-release build-composition`. Ajouter un mod interne = ajouter une entrée.
+# `overlay` = dossier in-repo (contenu enraciné racine jeu). `source="netcode"` = release netcode-v*.
+
+[[package]]
+id = "cyberverse-client"
+kind = "core"
+source = "netcode"
+required = true
+profile = "core"
+
+[[package]]
+id = "tessera-desossage"
+kind = "core"
+overlay = "client-mod/tessera-desossage/overlay"
+required = true
+profile = "core"
