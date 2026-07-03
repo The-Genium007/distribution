@@ -12,6 +12,6 @@ profile = "core"
 [[package]]
 id = "tessera-desossage"
 kind = "core"
-overlay = "client-mod/tessera-desossage/overlay"
+overlay = "tessera-core/client-mod/tessera-desossage/overlay"
 required = true
 profile = "core"
