@@ -1,0 +1,59 @@
+name: pages-deploy
+# Déploiement Pages via GitHub Actions (build_type: workflow) — remplace le système "legacy"
+# (branche main → Jekyll), qui échouait de façon intermittente ("Page build failed.", sans
+# détail exploitable) plusieurs fois par jour même avec .nojekyll déjà présent. Ce dépôt ne sert
+# que des fichiers statiques générés (manifestes JSON, servers.json signé) — pas de build réel
+# nécessaire, juste publier le contenu de main tel quel, sans passer par Jekyll.
+#
+# IMPORTANT (2026-07-06) : ce fichier DOIT vivre ici, dans distribution/.github/workflows/ du
+# monorepo — pas seulement sur le mirror The-Genium007/distribution. scripts/distribution-subtree-push.sh
+# (utilisé par modset-release.yml) fait un `git subtree split` + `push --force`, qui REMPLACE tout
+# l'arbre du mirror par le contenu de distribution/ du monorepo à chaque publication de modset. Un
+# fix appliqué seulement sur le mirror (comme ça a été fait une première fois) est silencieusement
+# effacé au prochain package-dev/promote/hotfix — cause du "plus aucun déploiement ne se déclenche"
+# observé ce jour-là (dev17 jamais arrivé en ligne).
+#
+# Retries automatiques : actions/deploy-pages échoue de temps en temps avec "Deployment failed,
+# try again later." — une erreur transitoire côté API Pages de GitHub, pas un problème de config
+# (rejouer le même run suffit à chaque fois, observé 2x le 2026-07-06). Plutôt que d'attendre
+# qu'un humain relance le run manuellement (et qu'un manifeste obsolète reste servi entre-temps),
+# on retente jusqu'à 3 fois dans le même run.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment-1.outputs.page_url || steps.deployment-2.outputs.page_url || steps.deployment-3.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - id: deployment-1
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - id: deployment-2
+        if: steps.deployment-1.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - id: deployment-3
+        if: steps.deployment-2.outcome == 'failure'
+        uses: actions/deploy-pages@v4
