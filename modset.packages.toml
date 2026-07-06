@@ -15,3 +15,10 @@ kind = "core"
 overlay = "tessera-core/client-mod/tessera-desossage/overlay"
 required = true
 profile = "core"
+
+[[package]]
+id = "tessera-playtest-save"
+kind = "core"
+overlay = "tessera-core/client-mod/tessera-playtest-save/overlay"
+required = true
+profile = "core"
