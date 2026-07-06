@@ -22,3 +22,17 @@ kind = "core"
 overlay = "tessera-core/client-mod/tessera-playtest-save/overlay"
 required = true
 profile = "core"
+
+[[package]]
+id = "tessera-skip-intro"
+kind = "core"
+overlay = "tessera-core/client-mod/tessera-skip-intro/overlay"
+required = true
+profile = "core"
+
+[[package]]
+id = "tessera-connection-watchdog"
+kind = "core"
+overlay = "tessera-core/client-mod/tessera-connection-watchdog/overlay"
+required = true
+profile = "core"
