@@ -4,6 +4,13 @@ name: pages-deploy
 # détail exploitable) plusieurs fois par jour même avec .nojekyll déjà présent. Ce dépôt ne sert
 # que des fichiers statiques générés (manifestes JSON, servers.json signé) — pas de build réel
 # nécessaire, juste publier le contenu de main tel quel, sans passer par Jekyll.
+#
+# Retries automatiques (2026-07-06) : actions/deploy-pages échoue de temps en temps avec
+# "Deployment failed, try again later." — une erreur transitoire côté API Pages de GitHub, pas
+# un problème de config (rejouer le même run suffit à chaque fois, observé 2x ce jour-là). Plutôt
+# que d'attendre qu'un humain relance le run manuellement (et qu'un update.json obsolète reste
+# servi entre-temps — ça a cassé l'auto-update du launcher), on retente jusqu'à 3 fois dans le
+# même run.
 
 on:
   push:
@@ -24,11 +31,22 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment-1.outputs.page_url || steps.deployment-2.outputs.page_url || steps.deployment-3.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
-      - id: deployment
+
+      - id: deployment-1
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - id: deployment-2
+        if: steps.deployment-1.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - id: deployment-3
+        if: steps.deployment-2.outcome == 'failure'
         uses: actions/deploy-pages@v4
