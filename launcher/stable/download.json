@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "channel": "stable",
+  "version": "1.1.12",
+  "tag": "launcher-v1.1.12",
+  "releasedAt": "2026-07-06T17:27:46.0920512Z",
+  "githubRelease": "https://github.com/The-Genium007/distribution/releases/tag/launcher-v1.1.12",
+  "installerExe": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.1.12/TesseraSynth-Launcher-Setup-1.1.12.exe",
+  "notes": "Public installer metadata. No secrets.",
+  "installerMsi": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.1.12/TesseraSynth-Launcher-1.1.12.msi"
+}
