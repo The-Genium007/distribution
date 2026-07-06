@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "channel": "stable",
-  "version": "1.1.7",
-  "tag": "launcher-v1.1.7",
-  "releasedAt": "2026-07-05T22:30:25.2197104Z",
-  "githubRelease": "https://github.com/The-Genium007/distribution/releases/tag/launcher-v1.1.7",
-  "installerExe": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.1.7/TesseraSynth-Launcher-Setup-1.1.7.exe",
+  "version": "1.1.8",
+  "tag": "launcher-v1.1.8",
+  "releasedAt": "2026-07-06T06:29:50.3491863Z",
+  "githubRelease": "https://github.com/The-Genium007/distribution/releases/tag/launcher-v1.1.8",
+  "installerExe": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.1.8/TesseraSynth-Launcher-Setup-1.1.8.exe",
   "notes": "Public installer metadata. No secrets.",
-  "installerMsi": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.1.7/TesseraSynth-Launcher-1.1.7.msi"
+  "installerMsi": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.1.8/TesseraSynth-Launcher-1.1.8.msi"
 }
