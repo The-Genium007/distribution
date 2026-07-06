@@ -1,0 +1,34 @@
+name: pages-deploy
+# Déploiement Pages via GitHub Actions (build_type: workflow) — remplace le système "legacy"
+# (branche main → Jekyll), qui échouait de façon intermittente ("Page build failed.", sans
+# détail exploitable) plusieurs fois par jour même avec .nojekyll déjà présent. Ce dépôt ne sert
+# que des fichiers statiques générés (manifestes JSON, servers.json signé) — pas de build réel
+# nécessaire, juste publier le contenu de main tel quel, sans passer par Jekyll.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
