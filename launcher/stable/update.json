@@ -1,19 +1,19 @@
 {
-  "version": "1.2.11",
-  "notes": "TesseraSynth Launcher 1.2.11 signed stable updater release.",
-  "pub_date": "2026-07-27T20:08:18.0132188Z",
+  "version": "1.2.12",
+  "notes": "TesseraSynth Launcher 1.2.12 signed stable updater release.",
+  "pub_date": "2026-07-27T20:43:14.4866950Z",
   "platforms": {
     "stable": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYkp0djhDTjFNZnFGb0tXV0Q2bkdONGo1UTRpWldDYXFOQWRCYjFxVUtqNWh1K01nZ0VMMW5neEduaVFick5ia0QzZEZ6VVdGWUhIWW5JR0d2NGhXeEJEWWRsazBldXdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MTgyODk3CWZpbGU6VGVzc2VyYVN5bnRoIExhdW5jaGVyXzEuMi4xMV94NjQtc2V0dXAuZXhlCkFldmlvby9weFVuTmV2R0pnR1pLYXhrN1dhRDROR2prME1GNkZVTERDUlpMa08yaGs0QXk1T21KNWlYVmZhTUhoV1d4Y0ZmNVE3NFJTbitHNExOMERBPT0K",
-      "url": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.2.11/TesseraSynth-Launcher-Setup-1.2.11.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYkp0djhDTjFNZnVsNjJQbWtMVzhJYUdWRWwwRnpxSjBTaXRqOUVWUTIwSTU4T0tlUkFJK29WMmN4Tlh2eFpYc3gySlk3UWlVekdtRjhNaFlPTmVnYzNPeUF0T25ZUFFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MTg0OTkzCWZpbGU6VGVzc2VyYVN5bnRoIExhdW5jaGVyXzEuMi4xMl94NjQtc2V0dXAuZXhlCnlTTlJFam1uV1BFUHpJVFZBS1p1TTk4R3JmZmUzMFR3ZHVXTFVncnRWR3ZKK3VaU25jZ2hqNGQzQ3lHb3lUN0NHK0haWnhPeFBMVkFCSXdtME9Dd0F3PT0K",
+      "url": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.2.12/TesseraSynth-Launcher-Setup-1.2.12.exe"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYkp0djhDTjFNZnFGb0tXV0Q2bkdONGo1UTRpWldDYXFOQWRCYjFxVUtqNWh1K01nZ0VMMW5neEduaVFick5ia0QzZEZ6VVdGWUhIWW5JR0d2NGhXeEJEWWRsazBldXdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MTgyODk3CWZpbGU6VGVzc2VyYVN5bnRoIExhdW5jaGVyXzEuMi4xMV94NjQtc2V0dXAuZXhlCkFldmlvby9weFVuTmV2R0pnR1pLYXhrN1dhRDROR2prME1GNkZVTERDUlpMa08yaGs0QXk1T21KNWlYVmZhTUhoV1d4Y0ZmNVE3NFJTbitHNExOMERBPT0K",
-      "url": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.2.11/TesseraSynth-Launcher-Setup-1.2.11.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYkp0djhDTjFNZnVsNjJQbWtMVzhJYUdWRWwwRnpxSjBTaXRqOUVWUTIwSTU4T0tlUkFJK29WMmN4Tlh2eFpYc3gySlk3UWlVekdtRjhNaFlPTmVnYzNPeUF0T25ZUFFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MTg0OTkzCWZpbGU6VGVzc2VyYVN5bnRoIExhdW5jaGVyXzEuMi4xMl94NjQtc2V0dXAuZXhlCnlTTlJFam1uV1BFUHpJVFZBS1p1TTk4R3JmZmUzMFR3ZHVXTFVncnRWR3ZKK3VaU25jZ2hqNGQzQ3lHb3lUN0NHK0haWnhPeFBMVkFCSXdtME9Dd0F3PT0K",
+      "url": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.2.12/TesseraSynth-Launcher-Setup-1.2.12.exe"
     },
     "windows-x86_64-nsis": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYkp0djhDTjFNZnFGb0tXV0Q2bkdONGo1UTRpWldDYXFOQWRCYjFxVUtqNWh1K01nZ0VMMW5neEduaVFick5ia0QzZEZ6VVdGWUhIWW5JR0d2NGhXeEJEWWRsazBldXdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MTgyODk3CWZpbGU6VGVzc2VyYVN5bnRoIExhdW5jaGVyXzEuMi4xMV94NjQtc2V0dXAuZXhlCkFldmlvby9weFVuTmV2R0pnR1pLYXhrN1dhRDROR2prME1GNkZVTERDUlpMa08yaGs0QXk1T21KNWlYVmZhTUhoV1d4Y0ZmNVE3NFJTbitHNExOMERBPT0K",
-      "url": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.2.11/TesseraSynth-Launcher-Setup-1.2.11.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYkp0djhDTjFNZnVsNjJQbWtMVzhJYUdWRWwwRnpxSjBTaXRqOUVWUTIwSTU4T0tlUkFJK29WMmN4Tlh2eFpYc3gySlk3UWlVekdtRjhNaFlPTmVnYzNPeUF0T25ZUFFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MTg0OTkzCWZpbGU6VGVzc2VyYVN5bnRoIExhdW5jaGVyXzEuMi4xMl94NjQtc2V0dXAuZXhlCnlTTlJFam1uV1BFUHpJVFZBS1p1TTk4R3JmZmUzMFR3ZHVXTFVncnRWR3ZKK3VaU25jZ2hqNGQzQ3lHb3lUN0NHK0haWnhPeFBMVkFCSXdtME9Dd0F3PT0K",
+      "url": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.2.12/TesseraSynth-Launcher-Setup-1.2.12.exe"
     }
   }
 }
