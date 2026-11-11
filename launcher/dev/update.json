@@ -1,0 +1,19 @@
+{
+  "version": "1.2.15",
+  "notes": "TesseraSynth Launcher 1.2.15 signed dev updater release.",
+  "pub_date": "2026-11-11T18:55:47.1253683Z",
+  "platforms": {
+    "dev": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSam5PMk1ZQWpjYVVtVFNrN2Q1RHFIZHk1Mnl4bjBHTWZYTmJ3dS9rWnlrWGhUWnFyOC9RbGNXWDVGaVlkVUY3dW10MzBzdU13MWFOTTQ2SWlJNUJzQmlGZm5QbDBONWd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDIzMzQ2CWZpbGU6VGVzc2VyYVN5bnRoIExhdW5jaGVyXzEuMi4xNV94NjQtc2V0dXAuZXhlCk5VNEJSMHJZSjV5d2FMWWdMWHFkWG55ZjY2MHJTSzh2MXVtaCtESmdueGxnTVcvN21TTk5ZaVdTTnlBcllISlJqQzZvQ1FEaUdqNHV2cWVhSG9QdkNnPT0K",
+      "url": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.2.15/TesseraSynth-Launcher-Setup-1.2.15.exe"
+    },
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSam5PMk1ZQWpjYVVtVFNrN2Q1RHFIZHk1Mnl4bjBHTWZYTmJ3dS9rWnlrWGhUWnFyOC9RbGNXWDVGaVlkVUY3dW10MzBzdU13MWFOTTQ2SWlJNUJzQmlGZm5QbDBONWd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDIzMzQ2CWZpbGU6VGVzc2VyYVN5bnRoIExhdW5jaGVyXzEuMi4xNV94NjQtc2V0dXAuZXhlCk5VNEJSMHJZSjV5d2FMWWdMWHFkWG55ZjY2MHJTSzh2MXVtaCtESmdueGxnTVcvN21TTk5ZaVdTTnlBcllISlJqQzZvQ1FEaUdqNHV2cWVhSG9QdkNnPT0K",
+      "url": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.2.15/TesseraSynth-Launcher-Setup-1.2.15.exe"
+    },
+    "windows-x86_64-nsis": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSam5PMk1ZQWpjYVVtVFNrN2Q1RHFIZHk1Mnl4bjBHTWZYTmJ3dS9rWnlrWGhUWnFyOC9RbGNXWDVGaVlkVUY3dW10MzBzdU13MWFOTTQ2SWlJNUJzQmlGZm5QbDBONWd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDIzMzQ2CWZpbGU6VGVzc2VyYVN5bnRoIExhdW5jaGVyXzEuMi4xNV94NjQtc2V0dXAuZXhlCk5VNEJSMHJZSjV5d2FMWWdMWHFkWG55ZjY2MHJTSzh2MXVtaCtESmdueGxnTVcvN21TTk5ZaVdTTnlBcllISlJqQzZvQ1FEaUdqNHV2cWVhSG9QdkNnPT0K",
+      "url": "https://github.com/The-Genium007/distribution/releases/download/launcher-v1.2.15/TesseraSynth-Launcher-Setup-1.2.15.exe"
+    }
+  }
+}
